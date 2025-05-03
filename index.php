@@ -8,29 +8,24 @@
 </head>
 <body>
     <form action="index.php " method="post">
+ <label>radius:</label>
+ <input type="text" name= "radius">
 
- <label>x:</label>
- <input type="text" name= "x">
- <label>y:</label>
- <input type="text" name= "y">
- <input type="submit" value="total">
+ <input type="submit" value="Calculate">
 
  
     </form>
 </body>
 </html>
-
-
+  
 <?php
- $x = $_POST["x"];
- $y = $_POST["y"];
- $total = null;
+$radius = $_POST["radius"];
+$circumference = null;
+$area = null;
 
-//math functions
-// $total = abs($x);
-//$total = round($x);
-//$total = floor($x);
-//$total = ceil($x);
-echo $total;
+$circumference = 2 * pi() * $radius;
+$area = pi() * $radius * $radius;
 
+echo ("Circumference = {$circumference} cm <br> ") ;
+echo ("The area is = {$area} cm<sup>2  <br> ")
 ?>
